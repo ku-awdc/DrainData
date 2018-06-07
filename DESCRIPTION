@@ -1,0 +1,23 @@
+Package: DrainData
+Version: 0.1-1
+Date: 2018-06-07
+Title: Import and Analysis of Data from Medela Chest Drains
+Authors@R: c(person("Matthew", "Denwood", role=c("aut","cre"), email="md@sund.ku.dk"), 
+			person("Bo", "Holbek", role=c("ctb","cph"), comment="Joint copyright holder of the original code upon which this R package is based"))
+Maintainer: Matthew Denwood <md@sund.ku.dk>
+Depends:
+    R (>= 2.14.0),
+	tidyverse
+Imports:
+	readxl,
+	rlang
+Suggests:
+    knitr
+VignetteBuilder: knitr
+Description: Imports data from Excel files produced by Medela Chest Drains,
+	corrects for anomolous 'spikes' in cumulative readings, and provides
+	a number of standard summarisation methods and graphs to visualise the
+	data.  To get started, see the 'DrainData' vignette:
+    vignette('DrainData', package='DrainData') and/or the help file for the
+    DrainData class (see ?DrainData ).
+License: GPL (>= 3)
