@@ -1,6 +1,9 @@
 # Used by initialise and some of the tests:
 blank_therapy_df <- data.frame(Identifier=character(0), FilePath=character(0), Hospital=character(0), FirstName=character(0), LastName=character(0), DateOfBirth=as.Date(character(0)), Sex=character(0), Remarks=character(0), stringsAsFactors=FALSE)
 
+# Required options:
+options(DrainDataSheets=c('Therapy','Data','Events'), DrainFluidLead=10)
+
 # Not exported - used by initialise and add data:
 read_files <- function(files, merge_by_name, quiet, current_therapy){
 	
