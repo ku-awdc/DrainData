@@ -134,7 +134,7 @@ read_files <- function(files, merge_by_name, quiet, current_therapy){
 		raf <- rev(adjfluid)
 		cmin <- cummin(raf)
 		if(any(cmin < raf)){
-			stop(paste0("Decreasing cumulative fluid detected for file ", file, " after correcting with a lead of ", dfl, " observations - try increasing e.g. options(DrainFluidLead=20)"))
+			stop(paste0("Decreasing cumulative fluid detected for file ", file, " after correcting with a lead of ", dfl, " observations - try increasing e.g. options(DrainFluidLead=20)"), call.=FALSE)
 		}
 		newdata <- cbind(Identifier=id, Date=as.Date(newdata$DateTime), newdata, AdjustedFluid=adjfluid)
 	

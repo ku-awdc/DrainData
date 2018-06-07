@@ -21,7 +21,7 @@ df <- dd$GetData()
 str(df)
 summary(df)
 
-ggplot(df, aes(x=DateTime, y=Fluid, col=Identifier)) +
+ggplot(df, aes(x=DateTime, y=AdjustedFluid, col=Identifier)) +
 	geom_line() +
 	geom_point()
 	
