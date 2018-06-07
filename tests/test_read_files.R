@@ -1,4 +1,3 @@
-unloadNamespace('DrainData')
 library('DrainData')
 
 testfiles <- system.file("extdata", c("A.xlsx", "B.xlsx"), package="DrainData")
